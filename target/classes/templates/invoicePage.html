@@ -1,0 +1,54 @@
+<h1>Invoice page</h1></h1>
+<form action="userSession/logout" method="POST">
+    <button type="submit">Logout</button>
+</form>
+
+<style>
+    table {
+        border: 1px solid #b3adad;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+
+    table th {
+        border: 1px solid #b3adad;
+        padding: 5px;
+        background: #f0f0f0;
+        color: #313030;
+    }
+
+    table td {
+        border: 1px solid #b3adad;
+        text-align: center;
+        padding: 5px;
+        background: #ffffff;
+        color: #313030;
+    }
+</style>
+
+<table>
+    <thead>
+    <tr>
+        <th>TITLE</th>
+        <th>DATE</th>
+        <th>DESCRIPTION</th>
+        <th>CATEGORY</th>
+        <th>PRICE</th>
+        <th>ACTION</th>
+    </tr>
+    </thead>
+    <tbody th:each="item: ${items}">
+    <tr>
+        <td th:text="${item.title}">&nbsp;</td>
+        <td th:text="${item.pdate}">&nbsp;</td>
+        <td th:text="${item.content}">&nbsp;</td>
+        <td th:text="${item.category}">&nbsp;</td>
+        <td th:text="${item.price}"></td>
+        <td><a th:href="@{'/editPayment/editPost/' + ${item.postId}}">
+            <button>EDIT INVOICE</button>
+        </a></td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/payment">Register new payment</a>

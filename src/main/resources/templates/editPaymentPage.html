@@ -1,0 +1,29 @@
+<form action="/editPayment/updateMode" method="POST">
+    <fieldset>
+
+        <h2>EDIT INVOICE POST</h2>
+    <label>Date</label>
+    <input type="date" name="date" th:value="${invoice.pdate}">
+    <br>
+    <label>Title</label>
+    <input type="text" name="title" th:value="${invoice.title}">
+    <br>
+    <label>Description</label>
+    <input type="text" name="content" th:value="${invoice.content}">
+    <br>
+    <label>Category</label>
+    <input type="text" name="category" th:value="${invoice.category}">
+    <br>
+    <label>Price</label>
+    <input type="number" name="price" th:value="${invoice.price}">
+    <br>
+    <button type="submit">Update</button>
+    <br>
+        </fieldset>
+</form>
+<br>
+<td><a href="/invoice">
+    <button>Cancel</button>
+</a></td>
+
+</html>

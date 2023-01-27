@@ -1,0 +1,34 @@
+<h1>Payment page</h1>
+
+
+<form action="payment" method="POST">
+    <fieldset>
+
+        <legend>CREATE NEW INVOICE</legend>
+        <label>Title</label>
+        <input type="text" name="title" required/>
+        <br>
+        <label>Description</label>
+        <input type="text" name="content" required/>
+        <br>
+        <label>Category</label>
+
+        <select name="category">
+            <option value="Lunch">Lunch</option>
+            <option value="Travel">Travel</option>
+            <option value="Others">Other</option>
+        </select>
+
+        <br>
+        <label>Date</label>
+        <input type="date" name="pdate" required/>
+        <br>
+        <label>Price</label>
+        <input type="number" name="price" required/>
+        <br>
+
+
+        <br>
+        <button type="submit">DONE</button>
+    </fieldset>
+</form>
